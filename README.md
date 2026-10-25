@@ -28,5 +28,10 @@
 
 ## Ссылки
 
-- Репозиторий: https://github.com/antonpop52/leonid-fitness
-- Слияние фотографий: https://github.com/antonpop52/leonid-fitness/pull/1
+- Сайт: https://antonpop52.github.io/
+- Репозиторий: https://github.com/antonpop52/antonpop52.github.io
+- Фотографии и слияние: https://github.com/antonpop52/antonpop52.github.io/pull/1
+- Документация: https://github.com/antonpop52/antonpop52.github.io/pull/2
+- Форк внешнего проекта: https://github.com/antonpop52/gitignore
+
+Репозиторий переименован из leonid-fitness в antonpop52.github.io для публикации сайта по короткому адресу.
