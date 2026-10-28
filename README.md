@@ -62,3 +62,9 @@ python3 -m http.server 8766 --directory dist
 ```
 
 В Settings → Pages в качестве источника выбран GitHub Actions. Значок в начале README показывает результат workflow для основной ветки.
+
+## Публикация на Vercel
+
+Альтернативная версия: https://leonid-fit.vercel.app/
+
+Репозиторий подключён к Vercel через GitHub App. После push в `main` платформа самостоятельно запускает проверку и сборку. Настройки сохранены в `vercel.json`: команда `pnpm run check && pnpm run build`, каталог публикации `dist`. Отдельный YAML-workflow для Vercel не нужен. Используется бесплатный тариф Hobby.
