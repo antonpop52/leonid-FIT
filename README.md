@@ -1,6 +1,8 @@
 # LEONID — фитнес-клуб
 
-Учебный проект Антона Попова, группа 4628, ГУАП. Лендинг фитнес-клуба LEONID для лабораторных работ №4 и №5 по информатике.
+[![Deploy LEONID-FIT](https://github.com/antonpop52/leonid-FIT/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/antonpop52/leonid-FIT/actions/workflows/deploy.yml)
+
+Учебный проект Антона Попова, группа 4628, ГУАП. Лендинг фитнес-клуба LEONID для лабораторных работ №4, №5 и №6 по информатике.
 
 ## Запуск
 
@@ -38,3 +40,25 @@
 ## Замена фотографий оборудования
 
 25.10.2026 три карточки оборудования обновлены изображениями из локальной папки images: strength.png — силовая зона, weights.png — свободные веса, functional.png — функциональный тренинг. Фон главного экрана сохранён. Для изображений уточнены текстовые описания и размеры. Изменения подготовлены ИИ-агентом в feature/photos и проверены перед объединением с main.
+
+## Автоматическая публикация
+
+Сайт публикуется через GitHub Actions. Workflow `.github/workflows/deploy.yml` запускается при push в `main`; в pull request выполняются только проверки без публикации.
+
+1. Устанавливаются закреплённые версии HTML Validate и Stylelint из `pnpm-lock.yaml`.
+2. Команда `pnpm run check` проверяет HTML, CSS, локальные файлы и якоря навигации.
+3. `pnpm run build` формирует папку `dist` только с файлами сайта.
+4. После успешных проверок артефакт автоматически публикуется на GitHub Pages.
+
+Если проверка завершается ошибкой, задание публикации не запускается. Права `pages: write` и `id-token: write` выданы только заданию деплоя.
+
+Для локальной проверки нужны Node.js 24, pnpm 11.25.0 и Python 3.9 или новее:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm run check
+pnpm run build
+python3 -m http.server 8766 --directory dist
+```
+
+В Settings → Pages в качестве источника выбран GitHub Actions. Значок в начале README показывает результат workflow для основной ветки.
