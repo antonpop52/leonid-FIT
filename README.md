@@ -2,7 +2,6 @@
 
 [![Deploy LEONID-FIT](https://github.com/antonpop52/leonid-FIT/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/antonpop52/leonid-FIT/actions/workflows/deploy.yml)
 
-Учебный проект Антона Попова, группа 4628, ГУАП. Лендинг фитнес-клуба LEONID для лабораторных работ №4, №5 и №6 по информатике.
 
 ## Запуск
 
